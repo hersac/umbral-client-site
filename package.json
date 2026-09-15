@@ -1,0 +1,38 @@
+{
+  "name": "umbral-client-site",
+  "version": "0.0.1",
+  "description": "Proyecto para el sitio web oficial del lenguaje de programacion Umbral. Este es el site de los clientes",
+  "main": "assets/js/main.js",
+  "scripts": {
+    "start": "live-server index.html",
+    "test": "test",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "umbral",
+    "web",
+    "oficial",
+    "lenguaje",
+    "de",
+    "programacion",
+    "desarrollo",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Heriberto Sanchez Castro",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^10.10.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.1",
+    "live-server": "^1.2.2",
+    "prettier": "^3.9.6"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint"
+    ]
+  }
+}
