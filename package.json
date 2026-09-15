@@ -5,7 +5,7 @@
   "description": "Proyecto para el sitio web oficial del lenguaje de programacion Umbral. Este es el site de los clientes",
   "main": "assets/js/main.js",
   "scripts": {
-    "start": "live-server index.html",
+    "start": "live-server --port=8080 --entry-file=index.html",
     "lint": "eslint .",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "prepare": "husky"
