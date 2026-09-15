@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "description": "Proyecto para el sitio web oficial del lenguaje de programacion Umbral. Este es el site de los clientes",
-  "main": "assets/js/main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "live-server --port=8080 --entry-file=index.html",
     "lint": "eslint .",

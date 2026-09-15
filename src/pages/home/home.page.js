@@ -13,12 +13,14 @@ export class HomePage extends HTMLElement {
   }
 
   async render() {
-    const htmlResponse = await fetch(
-      '/src/pages/home/home.page.html'
-    );
-    const template = await htmlResponse?.text();
-    const cssResponse = await fetch('/src/pages/home/home.page.css');
-    const style = await cssResponse?.text();
+    const [htmlResponse, cssResponse] = await Promise.all([
+      fetch('/src/pages/home/home.page.html'),
+      fetch('/src/pages/home/home.page.css'),
+    ]);
+    const [template, style] = await Promise.all([
+      htmlResponse?.text(),
+      cssResponse?.text(),
+    ]);
 
     this.shadowRoot.innerHTML = `
       <style>${style}</style>
