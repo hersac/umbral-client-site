@@ -4,11 +4,9 @@ export class HomePage extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.prueba = null;
   }
 
   async connectedCallback() {
-    await this.obtenerDatos();
     await this.render();
   }
 
@@ -26,14 +24,6 @@ export class HomePage extends HTMLElement {
       <style>${style}</style>
       ${interpolationsConverter(template, this)}
     `;
-  }
-
-  async obtenerDatos() {
-    if (!this.prueba) {
-      return;
-    }
-
-    this.prueba = 'Esto es una prueba';
   }
 }
 

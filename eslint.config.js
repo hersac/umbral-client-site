@@ -18,7 +18,13 @@ export default [
       'no-console': ['error', { allow: ['info', 'error'] }],
       'no-empty-function': 'error',
       'no-useless-constructor': 'error',
-      'max-len': ['error', { code: 70 }],
+      'max-len': [
+        'error',
+        {
+          code: 70,
+          ignorePattern: '^import\\s',
+        },
+      ],
       'max-lines-per-function': [
         'error',
         { max: 50, skipBlankLines: true },
